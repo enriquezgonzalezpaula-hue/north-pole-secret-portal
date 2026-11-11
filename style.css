@@ -2695,7 +2695,7 @@ body {
 
     .mailboxes .mailbox .mailbox-image {
         display: block;
-        width: 100% !important;
+        width: 70% !important;
         height: auto !important;
         max-height: none !important;
         object-fit: contain;
