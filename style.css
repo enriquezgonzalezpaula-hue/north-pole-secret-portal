@@ -2757,3 +2757,44 @@ body {
         width: 105px;
     }
 }
+
+/* BOTONES INDEPENDIENTES EN MOVILES */
+
+@media screen and (max-width: 600px) {
+
+    .portal .home-magical-navigation {
+        position: static !important;
+        inset: auto !important;
+
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: auto;
+        gap: 12px;
+        margin: 20px auto 10px;
+        padding: 0;
+    }
+
+    .portal .home-magic-button {
+        position: static !important;
+        inset: auto !important;
+        transform: none;
+        flex-shrink: 1;
+    }
+
+    .portal .concert-home {
+        width: 95px;
+    }
+
+    .portal .diary-home {
+        width: 70px;
+    }
+
+    .portal .map-home {
+        width: 105px;
+    }
+
+}
