@@ -2804,4 +2804,16 @@ body {
 
 }
 
+/* TAMAÑO DE LOS BUZONES SOLO EN MÓVILES */
 
+@media screen and (max-width: 600px) {
+    .mailboxes .mailbox {
+        width: 75%;
+        max-width: 260px;
+    }
+
+    .mailboxes .mailbox-image {
+        width: 100%;
+        height: auto;
+    }
+}
