@@ -81,9 +81,14 @@ h1 {
     }
 
     .mailbox {
-        width: 100%;
-        max-width: 350px;
-    }
+    width: 75%;
+    max-width: 260px;
+}
+
+.mailbox-image {
+    width: 100%;
+    height: auto;
+}
 }
 
 /* =====================================
@@ -2799,13 +2804,4 @@ body {
 
 }
 
-/* BUZONES MÁS PEQUEÑOS EN MÓVILES */
 
-@media screen and (max-width: 600px) {
-
-    .mailbox-image {
-        width: 25% !important;
-        height: auto;
-    }
-
-}
