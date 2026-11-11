@@ -2804,7 +2804,7 @@ body {
 @media screen and (max-width: 600px) {
 
     .mailbox-image {
-        width: 75% !important;
+        width: 50% !important;
         height: auto;
     }
 
