@@ -2798,3 +2798,14 @@ body {
     }
 
 }
+
+/* BUZONES MÁS PEQUEÑOS EN MÓVILES */
+
+@media screen and (max-width: 600px) {
+
+    .mailbox-image {
+        width: 75% !important;
+        height: auto;
+    }
+
+}
