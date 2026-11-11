@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The North Pole Secret Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- Leaflet JavaScript -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+</head>
+<body>
+
+    <!-- Nieve mágica animada -->
+    <div id="snow-container" aria-hidden="true"></div>
+
+    <main class="portal">
+        
+        <section class="welcome">
+            <img
+                src="assets/images/welcome-sign.png"
+                alt="Welcome to the North Pole!"
+                class="welcome-sign"
+            >
+        </section>
+
+         
+        <section class="mailboxes">
+
+            <!-- Santa mailbox -->
+            <button class="mailbox santa-mailbox"
+                    id="santa-button"
+                    type="button">
+
+                <img
+                    src="assets/images/santa-mailbox.png"
+                    alt="Santa's magical mailbox"
+                    class="mailbox-image"
+                >
+
+                <span class="magic-notification"
+                      id="santa-notification"
+                      aria-label="New letter"
+                      hidden>💌</span>
+
+            </button>
+
+            <!-- Elf mailbox -->
+            <button class="mailbox elf-mailbox"
+                    id="elf-button"
+                    type="button">
+
+                <img
+                    src="assets/images/elf-mailbox.png"
+                    alt="The Elf's magical mailbox"
+                    class="mailbox-image"
+                >
+
+                <span class="magic-notification"
+                      id="elf-notification"
+                      aria-label="New letter"
+                      hidden>💌</span>
+
+            </button>
+
+        </section>
+       
+        
+
+<!-- MAGICAL HOME NAVIGATION -->
+<div class="home-magical-navigation">
+
+    <!-- Christmas concert -->
+    <button id="concert-home-button"
+            class="home-magic-button concert-home"
+            type="button"
+            aria-label="Christmas Concert">
+
+        <img src="assets/images/xmas-concert-button.png"
+             alt="Xmas concert">
+
+    </button>
+
+    <!-- Elf's Travel Diary -->
+    <button id="diary-home-button"
+            class="home-magic-button diary-home"
+            type="button"
+            aria-label="Open Elf's Travel Diary">
+
+        <img src="assets/images/elf-diary-button.png"
+             alt="Elf's Travel Diary">
+
+        <span class="magic-notification"
+              id="diary-notification"
+              aria-label="New diary entry"
+              hidden>📸</span>
+
+    </button>
+
+    <!-- Track the Elf -->
+    <button id="track-elf-button"
+            class="home-magic-button map-home"
+            type="button"
+            aria-label="Track the Elf">
+
+        <img src="assets/images/elf-map-button.png"
+             alt="Where is the Elf?">
+
+        <span class="magic-notification"
+              id="map-notification"
+              aria-label="New destination"
+              hidden>📍</span>
+
+    </button>
+
+</div> <!-- Cierre de home-magical-navigation -->
+
+<!-- ===================================
+     SOBRE MÁGICO DEL POLO NORTE
+=================================== -->
+
+<div class="envelope-overlay" id="envelope-overlay" hidden>
+
+    <div class="envelope-window" role="dialog"
+         aria-modal="true"
+         aria-label="Magical Christmas envelope">
+
+        <button class="envelope-close" id="close-envelope"
+                aria-label="Close envelope">×</button>
+
+        <p class="envelope-heading">You've got magical mail!</p>
+
+        <div class="envelope" id="magic-envelope">
+
+            
+            <div class="envelope-back"></div>
+
+            <!-- Carta que saldrá del sobre -->
+            <div class="envelope-letter" aria-hidden="true">
+            <div class="envelope-letter-content">
+                <span class="letter-sparkle">✦</span>
+                <p>Special Delivery</p>
+                <span class="letter-sparkle">✧</span>
+            </div>
+        </div>
+
+        <div class="envelope-flap"></div>
+
+        <div class="envelope-front"></div>
+
+        <!-- Chispitas mágicas -->
+        <div class="envelope-sparkles" aria-hidden="true">
+            <span>✦</span>
+            <span>✧</span>
+            <span>✳</span>
+            <span>✦</span>
+            <span>✧</span>
+        </div>
+
+
+            <button class="envelope-seal" id="open-envelope"
+                    aria-label="Open your magical letter">
+
+                <img src="assets/images/santa-seal.png"
+                     class="envelope-santa-seal" alt="">
+
+                <img src="assets/images/elf-seal.png"
+                     class="envelope-elf-seal" alt="">
+
+            </button>
+
+        </div>
+
+        <p class="envelope-instruction">
+            Tap the magic seal to open your letter!
+        </p>
+
+    </div>
+
+</div>
+
+
+        <!-- postcards -->
+
+<div class="message-overlay" id="message-overlay" hidden>
+
+    <article class="message-card" role="dialog"
+             aria-modal="true"
+             aria-label="Christmas postcard">
+
+        <button class="close-button" id="close-message"
+                aria-label="Close postcard">×</button>
+        
+        
+        <!-- Decoraciones de las postales -->
+
+        <div class="postcard-decoration decoration-top-left"
+         aria-hidden="true">✦</div>
+
+        <div class="postcard-decoration decoration-bottom-right"
+         aria-hidden="true">✦</div>
+
+                
+        <div class="postcard-header">
+            <div class="postcard-postmark">
+                <span>NORTH POLE EXPRESS</span>
+                <small>Special Christmas Delivery</small>
+            </div>
+           
+        
+        <div class="postcard-stamp" aria-hidden="true">
+            <img src="assets/images/santa-stamp.png"
+             class="santa-stamp" alt="">
+
+            <img src="assets/images/elf-stamp.png"
+             class="elf-stamp" alt="">
+        </div>
+
+
+        </div>
+
+        <!-- Navegación entre cartas -->
+        <div class="letter-navigation" id="letter-navigation" hidden>
+            <button id="previous-letter" type="button">❮ Previous</button>
+            <span id="letter-counter"></span>
+            <button id="next-letter" type="button">Next ❯</button>
+        </div>
+        
+        <div class="postcard-body" id="postcard-body">
+
+            <p class="letter-greeting" id="letter-greeting"></p>
+
+            <!-- Sello de misión oficial -->
+            <div class="mission-stamp" id="mission-stamp" hidden>
+                ✨ Official North Pole Mission ✨
+            </div>
+            
+            <div class="letter-content" id="message-text"></div>
+
+            <div class="letter-ending">
+                <p id="letter-goodbye"></p>
+                <p class="letter-signature" id="letter-signature"></p>
+            </div>
+
+        </div>
+
+        <!-- Control de misiones -->
+        <div class="mission-controls" id="mission-controls" hidden>
+            <button id="complete-mission" type="button">
+                ✓ Mark Mission Complete
+            </button>
+        </div>
+      
+        
+        <!-- Sello de lacre del remitente -->
+        <div class="wax-seal" aria-hidden="true">
+            <img src="assets/images/santa-seal.png"
+             class="santa-seal"
+             alt="">
+
+            <img src="assets/images/elf-seal.png"
+             class="elf-seal"
+             alt="">
+        </div>
+
+
+        <div class="postcard-footer">
+            OFFICIAL MAIL • NORTH POLE
+        </div>
+
+    </article>
+
+</div>
+
+
+
+        
+<section class="countdown">
+    <h2 id="countdown-title">🧝 The Elf Is Coming in...</h2>
+
+    <div class="countdown-boxes">
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>Days</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+
+<!-- TRACK THE ELF -->
+<section id="track-elf" class="track-elf" hidden>
+
+    <div class="track-header">
+    
+        <div class="track-title-container">
+          <span class="track-decoration">✦ ───</span>
+
+          
+          <div class="track-title-main">
+            <img
+              src="assets/images/elf-hat.png"
+              alt=""
+              class="track-elf-hat"
+           >
+            <h2>Track the Elf</h2>
+          </div>
+
+
+          <span class="track-decoration">─── ✦</span>
+        </div>
+
+
+        <!-- TRACK THE ELF NAVIGATION -->
+        <div class="track-navigation">
+
+          <!-- LEFT: ELF'S DIARY -->
+          <button id="go-to-diary" class="track-nav-button diary-nav"
+                  type="button" aria-label="Go to the Elf's Travel Diary">
+          <img src="assets/images/elf-diary-button.png"
+                  alt="Elf's Travel Diary">
+          </button>
+
+          <!-- RIGHT: BACK TO NORTH POLE -->
+          <button id="back-to-north-pole" class="track-nav-button north-pole-nav"
+                  type="button" aria-label="Back to the North Pole">
+            <img src="assets/images/back-to-north-pole.png"
+                 alt="Back to the North Pole">
+          </button>
+
+        </div>
+
+    
+  </div>
+
+  <div id="elf-map"></div>
+
+
+    <!-- ELF'S TRAVEL DIARY -->
+    <section class="elf-diary" aria-labelledby="elf-diary-title">
+
+        <h3 id="elf-diary-title">✦ My Travel Diary ✦</h3>
+
+        <div id="elf-diary-entries" class="elf-diary-entries">
+            <!-- Adventures will appear here automatically -->
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ELF ADVENTURE WINDOW -->
+<div id="adventure-overlay" class="adventure-overlay" hidden>
+  <div class="adventure-window"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="adventure-title">
+
+    <button
+      id="close-adventure"
+      class="adventure-close"
+      type="button"
+      aria-label="Close adventure">
+      ×
+    </button>
+
+    <h3 id="adventure-title"></h3>
+
+    <div id="adventure-content"></div>
+
+    <p id="adventure-location"></p>
+
+  </div>
+</div>
+
+
+<!-- FULLSCREEN PHOTO VIEWER -->
+<div id="photo-viewer" class="photo-viewer" hidden>
+  <button
+    id="close-photo-viewer"
+    class="photo-viewer-close"
+    type="button"
+    aria-label="Close fullscreen photo">
+    ×
+  </button>
+
+  <img id="fullscreen-photo" src="" alt="Elf's adventure photo">
+</div>
+
+
+<!-- CHRISTMAS CONCERT POPUP -->
+<div id="concert-modal" class="concert-modal" hidden>
+
+  <button
+    id="close-concert-modal"
+    class="concert-modal-close"
+    type="button"
+    aria-label="Close Christmas concert poster">
+    ✕
+  </button>
+
+  <img
+    src="assets/images/christmas-concert-poster.png"
+    alt="Senior Green Class Christmas Concert, Friday 11 December 2026 at 3:00 p.m. All families are invited!"
+    class="concert-poster-image">
+
+</div>
+
+
+<!-- ELF ARRIVAL SURPRISE -->
+<!-- MAGICAL CHRISTMAS PRESENT -->
+<div class="magic-gift" id="magic-gift" hidden>
+    <button
+        class="magic-gift-button"
+        id="open-magic-gift"
+        type="button"
+        aria-label="Open your magical Christmas present">
+
+        <img
+            src="assets/images/magic-christmas-gift.png"
+            alt="A magical red Christmas present with a golden bow"
+            class="magic-gift-image"
+        >
+
+    </button>
+
+    <p>🎁 A Special Delivery Just for You!</p>
+</div>
+
+<div id="elf-arrival-modal" class="elf-arrival-modal" hidden>
+  <div class="elf-arrival-card" role="dialog"
+       aria-modal="true"
+       aria-labelledby="elf-arrival-title">
+
+    <button id="close-elf-arrival"
+            class="elf-arrival-close"
+            type="button"
+            aria-label="Close surprise">×</button>
+
+    <p class="elf-arrival-label">SPECIAL DELIVERY FROM THE NORTH POLE</p>
+
+    <h2 id="elf-arrival-title">🎉 I'M HERE!!! 🎉</h2>
+
+    <p class="elf-arrival-hello">Hellooooo, Senior Green!</p>
+
+    <div class="elf-arrival-photo">
+       <img src="assets/images/elf-classroom-selfie.jpg"
+         alt="The Christmas elf's first selfie in Senior Green">
+      <span>My first selfie in Senior Green! 📸</span>
+    </div>
+
+    <p>
+      Surprise!!! After travelling all around the world,
+      I've finally made it to your classroom!
+    </p>
+
+    <p>
+      I've even taken a little selfie to prove it!
+    </p>
+
+    <p class="elf-arrival-secret">
+      Now... can you find where I'm hiding? Hehehe!
+    </p>
+
+    <button id="find-elf-button"
+            class="elf-arrival-button"
+            type="button">
+      ✨ Let's find the elf!
+    </button>
+
+  </div>
+</div>
+
+
+</body>
+</html>
