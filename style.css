@@ -2722,4 +2722,38 @@ body {
     .time-box span {
         font-size: 1.5rem;
     }
+
+        /* Navegación adaptada a teléfonos */
+    .home-magical-navigation {
+        position: relative;
+        inset: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        margin: 12px auto;
+        pointer-events: auto;
+    }
+
+    .home-magic-button {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        flex: 0 1 auto;
+    }
+
+    .concert-home {
+        width: 95px;
+    }
+
+    .diary-home {
+        width: 70px;
+    }
+
+    .map-home {
+        width: 105px;
+    }
 }
