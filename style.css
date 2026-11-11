@@ -2661,3 +2661,65 @@ body {
     height: auto;
     margin: 0 auto;
 }
+
+
+/* =====================================
+   MOBILE LAYOUT - NORTH POLE
+   Solo teléfonos, sin afectar tablets
+===================================== */
+
+@media (max-width: 600px) {
+
+    .portal {
+        width: 100%;
+        padding: 15px 10px 25px;
+    }
+
+    .mailboxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0 !important;
+    }
+
+    .mailboxes .mailbox {
+        width: min(75vw, 290px) !important;
+        max-width: 290px !important;
+        flex: 0 0 auto !important;
+    }
+
+    .mailboxes .mailbox .mailbox-image {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain;
+    }
+
+    .welcome-sign {
+        width: min(95%, 380px);
+        height: auto;
+    }
+
+    .countdown {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px 8px;
+    }
+
+    .countdown h2 {
+        font-size: 1.3rem;
+    }
+
+    .countdown-boxes {
+        gap: 5px;
+    }
+
+    .time-box {
+        padding: 8px 2px;
+    }
+
+    .time-box span {
+        font-size: 1.5rem;
+    }
+}
