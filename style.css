@@ -2161,7 +2161,7 @@ h1 {
 }
 
 .mailboxes .mailbox .mailbox-image {
-    width: 100% !important;
+    width: 70% !important;
     height: 400px !important;
     max-width: none !important;
     max-height: none !important;
