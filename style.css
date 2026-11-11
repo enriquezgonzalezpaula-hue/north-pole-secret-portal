@@ -2688,9 +2688,9 @@ body {
     }
 
     .mailboxes .mailbox {
-        width: min(75vw, 290px) !important;
-        max-width: 290px !important;
-        flex: 0 0 auto !important;
+        width: min(55vw, 210px) !important;
+        max-width: 210px !important;
+        flex: 0 0 210px !important; 
     }
 
     .mailboxes .mailbox .mailbox-image {
@@ -2804,16 +2804,4 @@ body {
 
 }
 
-/* TAMAÑO DE LOS BUZONES SOLO EN MÓVILES */
 
-@media screen and (max-width: 600px) {
-    .mailboxes .mailbox {
-        width: 75%;
-        max-width: 260px;
-    }
-
-    .mailboxes .mailbox-image {
-        width: 100%;
-        height: auto;
-    }
-}
