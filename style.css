@@ -2768,7 +2768,7 @@ body {
 @media screen and (max-width: 600px) {
 
     .portal .home-magical-navigation {
-        position: relative !important;
+        position: static !important;
         inset: auto !important;
 
         display: flex !important;
