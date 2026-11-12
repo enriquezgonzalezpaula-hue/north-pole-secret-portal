@@ -941,7 +941,7 @@ const elfAdventures = [
     type: "photo",
     cover: "assets/images/norway-cover.png",
     files: [
-      "assets/images/norway-adventure.png"
+      "assets/images/norway-adventure.gif"
     ]
   },
   {
@@ -952,9 +952,9 @@ const elfAdventures = [
     type: "photo",
     cover: "assets/images/spain-cover.png",
     files: [
-      "assets/images/spain-ponferrada.png",
-      "assets/images/spain-sevilla.png",
-      "assets/images/spain-jaen.png"
+      "assets/images/spain-ponferrada.gif",
+      "assets/images/spain-sevilla.gif",
+      "assets/images/spain-jaen.gif"
     ]
   },
   {
@@ -965,7 +965,7 @@ const elfAdventures = [
     type: "photo",
     cover: "assets/images/scotland-cover.png",
     files: [
-      "assets/images/scotland-adventure.png"
+      "assets/images/scotland-adventure.gif"
     ]
   },
 
@@ -978,7 +978,7 @@ const elfAdventures = [
   type: "photo",
   cover: "assets/images/dublin-cover.png",
   files: [
-    "assets/images/dublin-adventure.png"
+    "assets/images/dublin-adventure.gif"
   ]
 }
 
