@@ -780,12 +780,12 @@ const elfStops = [
   {
     name: "Spain",
     coordinates: [40.4168, -3.7038],
-    date: "2026-11-26"
+    date: "2026-11-24"
   },
   {
     name: "Scotland",
     coordinates: [55.9533, -3.1883],
-    date: "2026-11-29"
+    date: "2026-11-26"
   },
   {
     name: "Dublin, Ireland",
@@ -968,7 +968,7 @@ const elfAdventures = [
   },
   {
     id: "spain",
-    date: "2026-11-26",
+    date: "2026-11-24",
     location: "Spain",
     title: "My Spanish Adventure!",
     type: "photo",
@@ -982,7 +982,7 @@ const elfAdventures = [
   },
   {
     id: "scotland",
-    date: "2026-11-29",
+    date: "2026-11-26",
     location: "Scotland",
     title: "Almost There!",
     type: "photo",
