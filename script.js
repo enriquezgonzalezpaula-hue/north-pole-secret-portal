@@ -131,19 +131,36 @@ You never know where I'll pop up!`,
     mission: "Welcome the Elf",
     greeting: "Dear Senior Green,",
     text: `Ho ho ho!
-I have some very important news from the North Pole!
-Remember that cheeky elf I told you about?
-Well, he has disappeared from my workshop!
-I found his little suitcase missing, a trail of glitter on the floor and a note that said: "Adventure time!"
-I think he might be on his way to Ireland!
-But we must make sure he feels welcome when he arrives.
+My dear friends in Senior Green!
+You won't believe what has happened at the North Pole!
+This morning, I went looking for my cheeky little elf, but he was nowhere to be found!
+His suitcase was gone, there was glitter all over my workshop, and I found a tiny note on my desk!
+It said:
+"Dear Santa, I'm on my way to Dublin! Don't worry, I've already told my friends in Senior Green that I'm coming!
+Adventure time!
+Love, your cheeky elf!"
+HO HO HO! Can you believe it?!
+He told YOU before he told ME?!
+Oh, that cheeky little elf!
+Well, if he's coming to visit you, we had better make sure he's given a magical welcome!
 
 Mission Number 2:
-🎄 Operation: Welcome the Elf!
-I need you to prepare a special little corner in your classroom for our travelling elf.
-You can make Christmas decorations, draw some pictures and create a big "Welcome Elf!" sign!
-I wonder what he will think when he sees everything you have made!
-Keep checking his travel map. He might be getting closer!
+Operation: Christmas Magic!
+My little friends, I've heard you've already started decorating a special corner for our cheeky elf!
+What a wonderful surprise! Keep up the amazing work!
+I have a few more important jobs for you!
+
+✨ Keep decorating your classroom and filling it with Christmas magic!
+
+🎵 Keep practising your Christmas concert songs! I can't wait to hear your beautiful singing!
+
+🌟 And don't forget to listen to your teachers and show them your very best behaviour!
+
+Oh, and one more little secret...
+HO HO HO! Don't forget about my magical North Pole cameras! 👀🎅🏻
+I love checking in every day to see all the wonderful things you're doing in Senior Green!
+Keep up the fantastic work, my little Christmas helpers!
+And remember... our cheeky elf is getting closer to Dublin!
 Ho ho ho!`,
     goodbye: "With Christmas magic,",
     signature: "Santa Claus 🎅"
@@ -167,7 +184,7 @@ Mission Number 3:
 🎄 The Elf Welcome Surprise!
 Can you prepare a special welcome surprise for me?
 Maybe a beautiful picture, a Christmas song or something magical for my new home!
-I can't wait to meet you all!
+I can't wait to see you all!
 See you tomorrow!
 Hehehe!`,
     goodbye: "Jingle bells and jellybeans!",
@@ -189,12 +206,17 @@ Yesterday I found a Christmas pudding inside my hat!
 I suspect he had something to do with it before leaving.
 Now that he is staying in your classroom, I need your help with something very important.
 
-Mission Number 4:
-🎄 The Elf Classroom Rules!
-Can you think of three special rules for your Christmas elf?
-What should he do to be a good classroom visitor?
-Make a beautiful poster with your three rules and put it somewhere he can see it.
-Let's see if he manages to follow them!
+**Mission Number 4:**
+🎄 Protect the Elf's Christmas Magic!
+Ho ho ho!
+Our cheeky elf has finally arrived! How exciting!
+I know your teachers have already told you, but here's a very important reminder...
+✨ Never Never Never touch the Elf! ✨
+Your elf has special Christmas magic! He uses it to watch over your adventures, your good behaviour... and your cheeky moments too!
+On Christmas Eve, he'll fly back to the North Pole and tell me all about his time with you!
+But if you touch him, he could lose his magic! And without it, he won't be able to return to the North Pole!
+Your mission: Keep his magic safe! Talk to him, wave and laugh at his tricks, but remember...
+Look with your eyes, not your hands!
 Ho ho ho!`,
     goodbye: "With lots of Christmas magic,",
     signature: "Santa Claus 🎅"
@@ -946,9 +968,9 @@ const elfAdventures = [
   },
   {
     id: "spain",
-    date: "2026-11-27",
+    date: "2026-11-26",
     location: "Spain",
-    title: "Three Spanish Adventures!",
+    title: "My Spanish Adventure!",
     type: "photo",
     cover: "assets/images/spain-cover.png",
     files: [
