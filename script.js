@@ -1176,7 +1176,7 @@ function openElfAdventure(adventure) {
   adventureContent.innerHTML = "";
 
   adventure.files.forEach(file => {
-    if (adventure.type === "video") {
+    if (file.toLowerCase().endsWith(".mp4")) {
       const frame = document.createElement("div");
       frame.className = "adventure-video";
 
@@ -1187,7 +1187,15 @@ function openElfAdventure(adventure) {
       video.preload = "metadata";
 
       frame.appendChild(video);
-      adventureContent.appendChild(frame);
+
+if (adventure.id === "spain") {
+    const cityName = document.createElement("p");
+    cityName.className = "polaroid-city";
+    cityName.textContent = "Santiago de Compostela";
+    frame.appendChild(cityName);
+}
+
+adventureContent.appendChild(frame);
 
     } else {
       const frame = document.createElement("div");
