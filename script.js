@@ -1206,7 +1206,7 @@ function openElfAdventure(adventure) {
       frame.appendChild(photo);
 
         if (adventure.id === "spain") {
-            const cityNames = ["Ponferrada", "Sevilla", "Jaén"];
+            const cityNames = ["Santiago de Compostela", "Ponferrada", "Sevilla", "Jaén"];
             const cityName = document.createElement("p");
 
             cityName.className = "polaroid-city";
